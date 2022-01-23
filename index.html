@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="js/game.js" type="module"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Snake Game</title>
+</head>
+
+<body>
+  <header class="header">Snake Game</header>
+
+  <section id="game-layout">
+    <!-- Layout (top) -->
+    <div class="dashboard">
+      <div class="score">Score:0</div>
+      <div class="highscore">Highscores:0</div>
+      <div class="volume"><img src="img/volume-mute.svg" alt="volume"></div>
+    </div>
+    <!-- Layout (middle) -->
+    <div class="gameover">
+      <p>GAME OVER</p>
+    </div>
+    <div id="game-board"></div>
+    <div class="starter">
+      <div class="player"><img src="img/play-btn.svg" alt="play"></div>Press Enter to Start
+    </div>
+    <!-- Responsive controls for small devices -->
+    <div class="touch-controls"></div>
+  </section>
+
+  <!-- Layout (bottom) -->
+  <span class="signature">@FredFonseca</span>
+</body>
+
+</html>
