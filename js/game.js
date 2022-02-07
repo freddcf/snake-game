@@ -11,7 +11,7 @@ import { outsideGrid } from "./gridPosition.js";
 import { updateScore } from "./scores.js";
 
 /*---------- SOUNDS ----------*/
-let speakerSound = true;
+let speakerSound = false;
 const deathSound = new Audio();
 export const eatSound = new Audio();
 export const moveSound = new Audio();
@@ -68,9 +68,7 @@ starter.addEventListener("animationend", (event) => {
   if (event.animationName === "fade") starter.style.display = "none";
 });
 
-speaker.addEventListener("click", () => {
-  audioState();
-});
+speaker.addEventListener("click", audioState);
 
 /* State Functions */
 
