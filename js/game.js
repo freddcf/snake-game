@@ -34,8 +34,11 @@ const gameOverScreen = document.querySelector(".gameover");
 function gameAnimationUpdate(curTime) {
   // GET GAME-OVER ALERT
   if (gameOver) {
-    location.reload();
-    alert("You lost the game...");
+    moveSound.muted = true;
+    if (confirm("You lost the game... Press Ok to restart")) {
+      window.location.reload();
+    }
+    return;
   }
 
   window.requestAnimationFrame(gameAnimationUpdate);
@@ -55,11 +58,13 @@ function gameAnimationUpdate(curTime) {
 window.addEventListener("load", () => {
   updateScore();
   audioState();
+  moveSound.muted = true;
 });
 
 window.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     starter.classList.add("animate");
+    moveSound.muted = false;
     window.requestAnimationFrame(gameAnimationUpdate);
   }
 });
