@@ -26,39 +26,47 @@ body {
   color: var(--light--color);
 }
 
-.header {
-  height: 70px;
-  width: 100%;
-  text-align: center;
-  line-height: 80px;
-  font-size: 30px;
-  letter-spacing: 2px;
-}
-
 #game-layout {
-  background-color: rgb(51, 51, 51);
-  height: 530px;
-  width: 530px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: solid 2px var(--dark--color);
   border-radius: 5px;
-  box-shadow: 4.4px 6px 3px 2px rgb(90, 90, 90);
+}
+
+.title-text{
+  font-size: 50px;
+}
+.top-content{
+  width: 100%;
+}
+.top-content .title-text{
+  margin-left: 65px;
+  text-align: left;
+}
+
+.middle-content {
+  display: flex;
+}
+.middle-content .left-title{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .dashboard {
-  width: var(--board-space);
-  height: 30px;
+  width: 100%;
+  height: 25px;
+  padding-left: 50px;
 }
 
 .dashboard .score,
 .dashboard .highscore {
   display: inline-block;
   font-size: 13px;
-  height: 30px;
-  line-height: 30px;
+  height: 20px;
+  line-height: 25px;
 }
 
 .dashboard .score {
@@ -70,11 +78,13 @@ body {
 }
 
 .dashboard .volume {
+  display: inline-block;
   width: 25px;
-  height: 25px;
-  float: right;
+  height: 20px;
+  right: 0;
   cursor: pointer;
 }
+
 
 #game-board {
   background-color: rgb(19, 19, 19);
@@ -84,23 +94,30 @@ body {
   display: grid;
   grid-template-rows: repeat(21, 1fr);
   grid-template-columns: repeat(21, 1fr);
-  margin: 0px 15px 15px 15px;
+  margin: 20px;
+}
+
+.starter,
+.gameover {
+  transform: translate(-45%,-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 .starter {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .animate {
   animation: fade 500ms;
 }
 
-.starter,
-.gameover {
-  position: absolute;
-  margin: 30px 15px 15px 15px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.starter{
+  margin: 0;
+  width: var(--board-space);
 }
 
 .starter .player {
@@ -111,7 +128,8 @@ body {
 
 .gameover {
   display: none;
-  animation: pop 600ms forwards;
+  width: fit-content;
+  animation: pop 600ms;
 }
 
 .gameover p {
@@ -122,50 +140,37 @@ body {
   animation: shake 0.6s;
 }
 
-.signature {
-  display: block;
-  text-align: center;
-  margin: 15px;
-  font-family: "Press Start 2P", sans-serif;
-  font-size: 12px;
-  letter-spacing: 2px;
-}
-
 .snake {
   background-color: #00a32c;
-  border: 0.45vmin solid #000;
+  border: 2.5px solid var(--dark--color);
 }
 
 .head {
   background-color: #18f051;
-  border: 0.45vmin solid #000;
+  border: 2.5px solid var(--dark--color);
 }
 
 .food {
   background-color: #eb2329;
   border-radius: 50%;
-  border: 0.4vmin solid #000;
+  border: 2px solid var(--dark--color);
 }
 
 @keyframes fade {
   from {
     opacity: 1;
-    transform: scale(1);
   }
   to {
     opacity: 0;
-    transform: scale(0.2);
   }
 }
 
 @keyframes pop {
   from {
     opacity: 0;
-    transform: scale(0);
   }
   to {
     opacity: 1;
-    transform: scale(1);
   }
 }
 
