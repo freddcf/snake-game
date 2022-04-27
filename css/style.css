@@ -46,6 +46,7 @@ body {
 }
 
 .middle-content {
+  position: relative;
   display: flex;
 }
 .middle-content .left-title{
