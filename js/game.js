@@ -43,7 +43,7 @@ function gameAnimationUpdate(curTime) {
 
   window.requestAnimationFrame(gameAnimationUpdate);
   // Get delay between rendered frames
-  const secSinceLastRender = (curTime - lastRenderTime) / 1000;
+  const secSinceLastRender = (curTime - lastRenderTime) / 10000;
   // Setting render time
   if (secSinceLastRender < 1 / SNAKE_SPEED) return;
 
