@@ -3,7 +3,7 @@ import { getInputDirection } from "./controls.js";
 import { setAdicionalScore } from "./scores.js";
 import { eatSound } from "./game.js";
 
-export const SNAKE_SPEED = 6.5;
+export const SNAKE_SPEED = 5;
 const SIZE_EXPANSION_RATE = 1;
 const ADD_SCORE = 10;
 const snakeBody = [{ x: 11, y: 11 }];
