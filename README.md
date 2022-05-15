@@ -3,7 +3,7 @@
 Jogo da cobrinha desenvolvido com ***JavaScript*** e que utiliza ***JSON*** para salvar dados de Highscore
 
 <p align="center">
-  <img height="450px" alt="screenshot-preview" src="https://github.com/freddcf/snake-game/blob/main/img/snakegame-preview.png?raw=true">
+  <img height="450px" alt="screenshot-preview" src="./.github/sr-img.png">
   <br>
 	<a href="#question-sobre">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 	<a href="#rocket-tecnologias">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
